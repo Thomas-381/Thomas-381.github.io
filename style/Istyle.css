@@ -1,22 +1,24 @@
-
-/*
-BUILD
-*/
-section:nth-child(1){
-    background-color: blue;
-}
-section:nth-child(2){
-    background-color: red;
-}
-section:nth-child(3){
-    background-color: green;
-}
 /* Début */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&family=Nunito:wght@600;900&display=swap');
 html > body{
     display: flex;
     flex-direction: column;
+    background-color: #1F1F1F;
+    color: #FFFFF0;
+    font-family: 'Nunito Sans', 'Nunito', sans-serif;
+    font-weight: 600;
 }
 html > body > section{
     height: 100px;
     width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.accueil{
+    height: 100vh;
+}
+.projets{
+    height: 50vh;
 }
