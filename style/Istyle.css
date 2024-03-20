@@ -1,0 +1,22 @@
+
+/*
+BUILD
+*/
+section:nth-child(1){
+    background-color: blue;
+}
+section:nth-child(2){
+    background-color: red;
+}
+section:nth-child(3){
+    background-color: green;
+}
+/* Début */
+html > body{
+    display: flex;
+    flex-direction: column;
+}
+html > body > section{
+    height: 100px;
+    width: 100%;
+}
