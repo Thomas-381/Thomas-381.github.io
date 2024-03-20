@@ -3,7 +3,7 @@
 html > body{
     display: flex;
     flex-direction: column;
-    background-color: #1F1F1F;
+    background-color: #171717;
     color: #FFFFF0; /* White bone */
     font-family: 'Nunito Sans', 'Nunito', sans-serif;
     font-weight: 600;
