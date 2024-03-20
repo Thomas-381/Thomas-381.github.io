@@ -9,12 +9,18 @@ html > body{
     font-weight: 600;
 }
 html > body > section{
-    height: 100px;
-    width: 100%;
-    padding: 10px;
+    padding: 50px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+html > body > section > h1{
+    font-size: 4.5em;
+    margin: 0px;
+}
+html > body > section > p{
+    font-size: 2em;
+    margin: 0px;
 }
 .accueil{
     height: 100vh;
