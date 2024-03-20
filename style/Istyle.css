@@ -4,7 +4,7 @@ html > body{
     display: flex;
     flex-direction: column;
     background-color: #1F1F1F;
-    color: #FFFFF0;
+    color: #FFFFF0; /* White bone */
     font-family: 'Nunito Sans', 'Nunito', sans-serif;
     font-weight: 600;
 }
@@ -19,6 +19,6 @@ html > body > section{
 .accueil{
     height: 100vh;
 }
-.projets{
+.secondaire{
     height: 50vh;
 }
