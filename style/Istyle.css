@@ -1,5 +1,7 @@
 /* Début */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&family=Nunito:wght@600;900&display=swap');
+
 html > body{
     display: flex;
     flex-direction: column;
@@ -8,23 +10,50 @@ html > body{
     font-family: 'Nunito Sans', 'Nunito', sans-serif;
     font-weight: 600;
 }
+
 html > body > section{
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 html > body > section > h1{
     font-size: 4.5em;
     margin: 0px;
 }
+
 html > body > section > p{
     font-size: 2em;
     margin: 0px;
 }
+
+html > body > section > div > article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    max-width: 250px;
+}
+
+html > body > section > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+html > body > section > div:nth-child(2){
+    width: 100vh;
+}
+
 .accueil{
     height: 100vh;
 }
+
 .secondaire{
-    height: 50vh;
+    height: 25vh;
+}
+
+#projets{
+    align-items: center;
 }
