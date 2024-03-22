@@ -34,6 +34,8 @@ html > body > section > div > article{
     justify-content: space-between;
     margin-top: 50px;
     max-width: 250px;
+    border: 2px solid #FFFFF0;
+    border-radius: 15px;
 }
 
 html > body > section > div{
