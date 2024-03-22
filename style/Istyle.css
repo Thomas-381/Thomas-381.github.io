@@ -5,10 +5,11 @@
 html > body{
     display: flex;
     flex-direction: column;
-    background-color: #171717;
+    background-color: #000;
     color: #FFFFF0; /* White bone */
     font-family: 'Nunito Sans', 'Nunito', sans-serif;
     font-weight: 600;
+    padding-bottom: 125px;
 }
 
 html > body > section{
@@ -33,9 +34,15 @@ html > body > section > div > article{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 50px;
+    padding: 10px;
     max-width: 250px;
-    border: 2px solid #FFFFF0;
+    border: 2px solid #040720;
     border-radius: 15px;
+}
+
+html > body > section > div > article:hover{
+    /*border: 2px solid rgba(255, 255, 255, 0.2);*/
+    box-shadow: 0 0 20px 5px #040720;;
 }
 
 html > body > section > div{
@@ -44,6 +51,11 @@ html > body > section > div{
     justify-content: space-evenly;
     
 }
+
+html > body > section > div > article > h3{
+    align-self: center;
+}
+
 html > body > section > div:nth-child(2){
     width: 100vh;
 }
@@ -54,6 +66,12 @@ html > body > section > div:nth-child(2){
 
 .secondaire{
     height: 25vh;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px 2px 2px 2px;
 }
 
 #projets{
