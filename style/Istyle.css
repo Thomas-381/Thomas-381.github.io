@@ -48,8 +48,7 @@ html > body > section > div > article:hover{
 html > body > section > div{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;   
 }
 
 html > body > section > div > article > h3{
@@ -58,6 +57,11 @@ html > body > section > div > article > h3{
 
 html > body > section > div:nth-child(2){
     width: 100vh;
+}
+
+strong{
+    color: #834aff;
+    font-weight: 900;
 }
 
 .accueil{
