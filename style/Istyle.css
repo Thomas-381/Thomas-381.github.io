@@ -29,7 +29,7 @@ html > body > section > p{
     margin: 0px;
 }
 
-html > body > section > div > article{
+html > body > section > div.carteProjets > article{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,7 +40,7 @@ html > body > section > div > article{
     border-radius: 15px;
 }
 
-html > body > section > div > article:hover{
+html > body > section > div.carteProjets > article:hover{
     /*border: 2px solid rgba(255, 255, 255, 0.2);*/
     transform: translateY(-0.25rem);
     transition: transform .2s ease-in-out;
@@ -53,12 +53,12 @@ html > body > section > div{
     justify-content: space-between;   
 }
 
-html > body > section > div > article > h3{
+html > body > section > div > article.carteProjets > h3{
     align-self: center;
     justify-content: center;
 }
 
-html > body > section > div:nth-child(2){
+.carteProjets{
     width: 100vh;
 }
 
@@ -88,6 +88,29 @@ strong{
     bottom: 0px;
 }
 
+.social{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s ease;
+}
+
+.socialImg{
+    width: 28px;
+    height: 28px;
+}
+
+.carteResau{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    gap: 3px;
+
+}
 #projets{
     align-items: center;
 }
