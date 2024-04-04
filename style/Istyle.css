@@ -55,8 +55,7 @@ html > body > section > div{
 }
 
 html > body > section > div > article.carteProjets > h3{
-    align-self: center;
-    justify-content: center;
+    text-align: center;
 }
 
 strong{
