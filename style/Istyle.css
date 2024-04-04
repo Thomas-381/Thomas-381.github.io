@@ -42,7 +42,6 @@ html > body > section > div.carteProjets > article{
 }
 
 html > body > section > div.carteProjets > article:hover{
-    /*border: 2px solid rgba(255, 255, 255, 0.2);*/
     transform: translateY(-0.25rem);
     transition: transform .2s ease-in-out;
     box-shadow: 0 0 20px 5px #040720;
@@ -54,7 +53,7 @@ html > body > section > div{
     justify-content: space-between;   
 }
 
-html > body > section > div > article.carteProjets > h3{
+html > body > section > div.carteProjets > article > h3{
     text-align: center;
 }
 
@@ -212,4 +211,5 @@ button:active {
       opacity: 1;
     }
   }
-  
+
+/*****************************************************************************************************/
