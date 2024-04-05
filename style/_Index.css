@@ -57,6 +57,10 @@ html > body > section > div.carteProjets > article > h3{
     text-align: center;
 }
 
+html > body > section > div.carteProjets > article > figure{
+    margin-top: 0px;
+}
+
 strong{
     color: #834aff;
     font-weight: 900;
@@ -145,6 +149,11 @@ button:active {
     justify-content: center;
     align-items: center;
     transition: background-color .3s ease;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
 }
 
 .socialImg{
