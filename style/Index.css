@@ -119,12 +119,12 @@ button:active {
 }
 
 .accueil{
-    height: 85vh;
+    height: 85vh;/* 100vh si FP on*/
     padding-bottom: 15vh;
 }
 
 .secondaire{
-    height: 25vh;
+    height: 25vh; /* 50vh si FP on*/
 }
 
 .img{
