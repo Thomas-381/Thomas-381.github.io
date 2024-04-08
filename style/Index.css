@@ -119,7 +119,7 @@ button:active {
 }
 
 .accueil{
-    height: 85vh;/* 100vh si FP on*/
+    height: 90vh;/* 100vh si FP on*/
     padding-bottom: 15vh;
 }
 
