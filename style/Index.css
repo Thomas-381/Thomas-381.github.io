@@ -12,7 +12,7 @@ html > body{
 }
 
 html > body > section{
-    padding: 50px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,37 +28,45 @@ html > body > section > p{
     font-size: 3.5em;
     margin: 0px;
 }
+html > body > section > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    width: -moz-available;
+}
 
 html > body > section > div.carteProjets > article{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding: 10px;
+    justify-content: space-around;
+    padding: 15px;
     max-width: 250px;
-    border: 2px solid #040720;
-    border-radius: 15px;
+    border: 2px solid #0e1557;
+    border-radius: 23px;
     align-items: center;
 }
 
 html > body > section > div.carteProjets > article:hover{
     transform: translateY(-0.25rem);
-    transition: transform .2s ease-in-out;
-    box-shadow: 0 0 20px 5px #040720;
+    transition: transform .4s ease-in-out;
+    box-shadow: 0 0 20px 5px #192693;
 }
 
-html > body > section > div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;   
-}
+
 
 html > body > section > div.carteProjets > article > h3{
     text-align: center;
 }
 
+html > body > section > div.carteProjets > article > p{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
 html > body > section > div.carteProjets > article > figure{
     margin-top: 0px;
+    margin-bottom: 8px;
 }
 
 strong{
@@ -67,9 +75,9 @@ strong{
 }
 
 button {
-    --glow-color: #13218a;
+    --glow-color: #374cf0;
     --glow-spread-color: #040720;
-    --enhanced-glow-color: #1726a8;
+    --enhanced-glow-color: #2033df;
     --btn-color: #090d35;
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
@@ -120,17 +128,19 @@ button:active {
 
 .accueil{
     height: 90vh;/* 100vh si FP on*/
-    padding-bottom: 15vh;
+    /*padding-bottom: 15vh;*/
 }
 
+/*
 .secondaire{
-    height: 25vh; /* 50vh si FP on*/
+    height: 25vh; /* 50vh si FP on
 }
-
+*/
 .img{
-    width: 240.0px;
-    height: 160.0px;
-    border-radius: 4px 4px 4px 4px;
+    width: 252.0px; /*240*/
+    height: 168.0px; /*160*/
+    border-radius: 8px;
+    margin: 0px;
 }
 
 .footer{
@@ -171,7 +181,7 @@ button:active {
 }
 
 .carteProjets{
-    width: 100vh;
+    padding: 0px;
 }
 
 #projets{
