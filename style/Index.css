@@ -167,21 +167,12 @@ button:active {
     align-items: center;
     transition: background-color .3s ease;
 }
-.lien{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .logo{
     width: 30px;
     height: 30px;
 }
-.lienLogo{
-    width: 30px;
-    height: 30px;
-}
+
 .socialImg{
     width: 28px;
     height: 28px;
