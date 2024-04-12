@@ -183,8 +183,6 @@ button:active {
     flex-direction: row;
     width: 200px;
     gap: 8px;
-
-
 }
 
 .carteProjets{
@@ -240,11 +238,12 @@ button:active {
 
 /*****************************************************************************************************/
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     html > body > section > h1{
         font-size: 3.5em;
         margin: 0px;
         font-weight: 700;
+        text-align: center;
     }
     html > body > section > div > h2{
         font-size: 1.5em;
@@ -255,9 +254,19 @@ button:active {
     html > body > section > p{
         font-size: 1.5em;
         margin: 0px;
+        text-align: center;
     }
     html > body > section > div{
         flex-direction: column;
         gap: 25px;
     }
+    html > body > section.accueil{
+        max-width: 100%;
+        align-items: center;
+    }
+    .carteResau{
+        width: 100%;
+        justify-content: center;
+    }
+    
   }
