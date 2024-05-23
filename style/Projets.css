@@ -36,18 +36,18 @@ html > body > section > p{
 }
 html > body > section > div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 150px;
+    gap: 15px;
     width: -moz-available;
 }
 
 html > body > section > div.carteProjets > article{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     padding: 15px;
-    max-width: 250px;
+    min-width: -moz-available;
     border: 2px solid #0e1557;
     border-radius: 23px;
     align-items: center;
@@ -58,21 +58,29 @@ html > body > section > div.carteProjets > article:hover{
     transition: transform .4s ease-in-out;
     box-shadow: 0 0 20px 5px #192693;
 }
+html > body > section > div.carteProjets > article > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    min-width: -moz-available;
+    align-items: center;
+}
 
 
-
-html > body > section > div.carteProjets > article > h3{
+html > body > section > div.carteProjets > article > div > h3{
     text-align: center;
     font-weight: bolder;
 }
 
-html > body > section > div.carteProjets > article > p{
+html > body > section > div.carteProjets > article > div > p{
     text-align: center;
     margin-bottom: 8px;
+    padding: 0px 20px 0px 20px;
 }
 
-html > body > section > div.carteProjets > article > figure{
-    margin-top: 0px;
+html > body > section > div.carteProjets > article > div > figure{
+    margin-top: 16px;
     margin-bottom: 8px;
 }
 
@@ -138,19 +146,14 @@ button:active {
            inset 0 0 .5em .25em var(--glow-color);
 }
 
-.accueil{
-    height: 90vh;/* 100vh si FP on*/
-    /*padding-bottom: 15vh;*/
-}
-
 /*
 .secondaire{
     height: 25vh; /* 50vh si FP on
 }
 */
 .img{
-    width: 252.0px; /*240*/
-    height: 168.0px; /*160*/
+    max-width: 600.0px; /*240*/
+    max-height: 400.0px; /*160*/
     border-radius: 8px;
     margin: 0px;
 }
@@ -174,8 +177,8 @@ button:active {
 }
 
 .logo{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
 }
 
 .socialImg{
