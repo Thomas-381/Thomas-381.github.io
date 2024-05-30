@@ -44,13 +44,19 @@ html > body > section > div{
 
 html > body > section > div.carteProjets > article{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 15px;
     min-width: -moz-available;
     border: 2px solid #0e1557;
     border-radius: 23px;
     align-items: center;
+}
+html > body > section > div.carteProjets > article:nth-child(odd){
+    flex-direction: row;
+}
+
+html > body > section > div.carteProjets > article:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 html > body > section > div.carteProjets > article:hover{
@@ -61,9 +67,9 @@ html > body > section > div.carteProjets > article:hover{
 html > body > section > div.carteProjets > article > div{
     display: flex;
     flex-direction: column;
+    flex-grow: 2;
     justify-content: space-between;
     padding: 15px;
-    min-width: -moz-available;
     align-items: center;
 }
 
@@ -158,6 +164,9 @@ button:active {
     margin: 0px;
 }
 
+.acceuil{
+    align-items: center;
+}
 .footer{
     display: flex;
     justify-content: center;
@@ -209,8 +218,8 @@ button:active {
 
 
 .slide-in-left {
-	-webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: slide-in-left 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* ----------------------------------------------
