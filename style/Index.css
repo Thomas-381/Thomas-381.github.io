@@ -1,17 +1,81 @@
 /* Début */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,75..125,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    color-scheme: light;
+    --primary: #23272a;
+    --text-1: #000; /* Black or near-black for better contrast */
+    --text-2: #3A0CA3; /* A dark violet for strong emphasis */
+    --secondary: #ffffff40;
+    --background-1: #FFFFFF; /* White */
+    --background-2: #F0F0F0; /* Very light gray for subtle variation */
+    --border-1: #CCCCCC; /* Light gray border */
+    --border-2: #AAAAAA; /* Slightly darker gray for secondary borders */
+    --border-3: #DDDDDD;
+    --gradient-1: #F3F3F3;
+    --brightness: 100%;
+    --glow-color: #A5C1FF; /* Soft light blue for glow effect */
+    --glow-spread-color: #F0F4FF; /* Light bluish for spread glow */
+    --enhanced-glow-color: #7FA7FF; /* More saturated blue for enhanced glow */
+    --btn-color: #E0E0E0; /* Light gray button background */    
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #ffffff;
+    --text-1: #FFFFF0; /* White bone */
+    --text-2: #834aff; /*strong*/
+    --secondary: #211e1e40;
+    --background-1: #000;
+    --background-2: #1a1a1a;
+    --border-1: #0e1557;
+    --border-2: #192693;
+    --border-3: #000000;
+    --gradient-1: #2c2f33;
+    --brightness: 10%;
+    --glow-color: #374cf0;
+    --glow-spread-color: #040720;
+    --enhanced-glow-color: #2033df;
+    --btn-color: #090d35;
+}
 
 html > body{
     display: flex;
     flex-direction: column;
-    background-color: #000;
-    color: #FFFFF0; /* White bone */
+    background-color: var(--background-1);
+    color: var(--text-1); 
     font-family: 'Nunito', 'Nunito Sans', sans-serif;
     font-weight: 600;
     gap: 50px;
+    transition: all 0.3s ease-in-out;
 }
 
-html > body > section{
+html > body > header{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    padding: 16px 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    border-radius: 0 0 15px 15px;
+    border-bottom: 1px solid var(--border-3);
+    background: var(--secondary);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+    width: 60vw;
+    position: fixed;
+}
+
+html > body > main > section{
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -19,22 +83,24 @@ html > body > section{
     gap: 25px;
 }
 
-html > body > section > h1{
+html > body > main > section > h1{
     font-size: 6.5em;
     margin: 0px;
     font-weight: 700;
+    transition: all 0.3s ease-in-out;
 }
-html > body > section > div > h2{
+html > body > main > section > div > h2{
     font-size: 1.5em;
     margin: 0px;
     font-weight: 900;
+    transition: all 0.3s ease-in-out;
 }
 
-html > body > section > p{
+html > body > main > section > p{
     font-size: 3.5em;
     margin: 0px;
 }
-html > body > section > div{
+html > body > main > section > div{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,50 +108,50 @@ html > body > section > div{
     width: -moz-available;
 }
 
-html > body > section > div.carteProjets > article{
+html > body > main > section > div.carteProjets > article{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
     max-width: 250px;
-    border: 2px solid #0e1557;
+    border: 2px solid var(--border-1);
     border-radius: 23px;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
-html > body > section > div.carteProjets > article:hover{
+html > body > main > section > div.carteProjets > article:hover{
     transform: translateY(-0.25rem);
     transition: transform .4s ease-in-out;
-    box-shadow: 0 0 20px 5px #192693;
+    box-shadow: 0 0 20px 5px var(--border-2);
 }
 
-
-
-html > body > section > div.carteProjets > article > h3{
+html > body > main > section > div.carteProjets > article > h3{
     text-align: center;
     font-weight: bolder;
+    transition: all 0.3s ease-in-out;
 }
 
-html > body > section > div.carteProjets > article > p{
+html > body > main > section > div.carteProjets > article > p{
     text-align: center;
     margin-bottom: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
-html > body > section > div.carteProjets > article > figure{
+html > body > main > section > div.carteProjets > article > figure{
     margin-top: 0px;
     margin-bottom: 8px;
 }
 
 strong{
-    color: #834aff;
+    color: var(--text-2);
     font-weight: 900;
 }
+button{
+    cursor: pointer;
+}
 
-button {
-    --glow-color: #374cf0;
-    --glow-spread-color: #040720;
-    --enhanced-glow-color: #2033df;
-    --btn-color: #090d35;
+.bouton {
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
     color: var(--glow-color);
@@ -95,10 +161,10 @@ button {
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
+    box-shadow: 0 0 1em .25em var(--glow-color)/*,
            0 0 4em 1em var(--glow-spread-color),
            inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color)*/;
     position: relative;
     transition: all 0.3s;
 }
@@ -124,15 +190,15 @@ button::after {
 }
 */
    
-button:hover {
-    color: #FFFFF0;/*var(--btn-color)*/
+.bouton:hover {
+    color: var(--text-1);/*var(--btn-color)*/
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
            0 0 4em 2em var(--glow-spread-color),
            inset 0 0 .75em .25em var(--glow-color);
 }
    
-button:active {
+.bouton:active {
     box-shadow: 0 0 0.6em .25em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
@@ -142,7 +208,10 @@ button:active {
     height: 90vh;/* 100vh si FP on*/
     /*padding-bottom: 15vh;*/
 }
-
+.btn{
+    background: none;
+    border: none;
+}
 /*
 .secondaire{
     height: 25vh; /* 50vh si FP on
@@ -166,7 +235,7 @@ button:active {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #1a1a1a;
+    background-color: var(--background-2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,8 +257,32 @@ button:active {
     flex-direction: row;
     width: 200px;
     gap: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
+.carteResau > a {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    background: var(--background-2);
+    text-decoration: none;
+    color: var(--text-1);
+    transition: all 0.3s ease-in-out;
+}
+
+.carteResau > a > svg{
+    fill: var(--primary);
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.carteResau > a:hover {
+    background: var(--gradient-2);
+}
 .carteProjets{
     padding: 0px;
 }
@@ -197,7 +290,7 @@ button:active {
 #titreSecondaire{
     font-size: 1em;
     font-weight: 900;
-    color: #FFFFF0;
+    color: var(--text-1);
 }
 
 #projets{
@@ -250,28 +343,28 @@ button:active {
 /*****************************************************************************************************/
 
 @media screen and (max-width: 600px) {
-    html > body > section > h1{
+    html > body > main > section > h1{
         font-size: 3.5em;
         margin: 0px;
         font-weight: 700;
         text-align: center;
     }
-    html > body > section > div > h2{
+    html > body > main > section > div > h2{
         font-size: 1.5em;
         margin: 0px;
         font-weight: 900;
     }
     
-    html > body > section > p{
+    html > body > main > section > p{
         font-size: 1.5em;
         margin: 0px;
         text-align: center;
     }
-    html > body > section > div{
+    html > body > main > section > div{
         flex-direction: column;
         gap: 25px;
     }
-    html > body > section.accueil{
+    html > body > main > section.accueil{
         max-width: 100%;
         align-items: center;
     }
