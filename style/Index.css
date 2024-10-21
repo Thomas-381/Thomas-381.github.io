@@ -255,18 +255,20 @@ button::after {
 .carteResau{
     display: flex;
     flex-direction: row;
-    width: 200px;
+    /*width: 200px;*/
     gap: 8px;
     transition: all 0.3s ease-in-out;
 }
 
-.carteResau > a {
+.carteResau > a { /* Petite pastille des réseaux sociaux */
     display: flex;
-    padding: 10px 16px;
+    /*padding: 10px 16px;*/
+    height: 72px;
+    width: 72px;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    border-radius: 10px;
+    border-radius: 50%;
     background: var(--background-2);
     text-decoration: none;
     color: var(--text-1);
@@ -279,7 +281,7 @@ button::after {
 }
 
 .carteResau > a:hover {
-    background: var(--gradient-2);
+    background: var(--gradient-1);
 }
 .carteProjets{
     padding: 0px;
