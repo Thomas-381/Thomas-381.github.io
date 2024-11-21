@@ -1,0 +1,330 @@
+/* Début */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,75..125,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
+$color-scheme: light
+$primary: #23272a
+$text1: #000 // Black or near-black for better contrast
+$text-2: #3A0CA3 // A dark violet for strong emphasis
+$secondary: #ffffff40
+$background: #FFFFFF // White
+$background-2: #F0F0F0 // Very light gray for subtle variation
+$border-1: #CCCCCC // Light gray border
+$border-2: #AAAAAA // Slightly darker gray for secondary borders
+$border-3: #DDDDDD
+$gradient-1: #F3F3F3
+$brightness: 100%
+$glow-color: #A5C1FF // Soft light blue for glow effect
+$glow-spread-color: #F0F4FF // Light bluish for spread glow
+$enhanced-glow-color: #7FA7FF // More saturated blue for enhanced glow
+$btn-color: #E0E0E0 // Light gray button background
+    
+[data-theme="dark"]
+    $color-scheme: dark !global
+    $primary: #ffffff !global
+    $text1: #FFFFF0 !global /* White bone */
+    $text-2: #834aff !global /*strong*/
+    $secondary: #211e1e40 !global
+    $background: #000 !global
+    $background-2: #1a1a1a !global
+    $border-1: #0e1557 !global
+    $border-2: #192693 !global
+    $border-3: #000000 !global
+    $gradient-1: #2c2f33 !global
+    $brightness: 10% !global
+    $glow-color: #374cf0 !global
+    $glow-spread-color: #040720 !global
+    $enhanced-glow-color: #2033df !global
+    $btn-color: #090d35 !global
+
+html body
+    display: flex
+    flex-direction: column
+    background-color: $background
+    color:  $text1
+    font-family: 'Nunito', 'Nunito Sans', sans-serif
+    font-weight: 600
+    gap: 50px
+    transition: all 0.3s ease-in-out
+
+html > body > header
+    display: flex
+    height: 45px
+    width: 100%
+    padding: 16px 10px
+    justify-content: center
+    align-items: center
+    z-index: 100
+    position: fixed
+    top: 0
+    border-radius: 0 0 15px 15px
+    border-bottom: 1px solid  $border-3
+    background: $secondary
+    backdrop-filter: blur(10px)
+    transition: all 0.3s ease-in-out
+
+nav
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    gap: 15px
+    width: 60vw
+    position: fixed
+
+html > body > main > section
+    padding: 25px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 25px
+
+html > body > main > section > h1
+    font-size: 6.5em
+    margin: 0
+    font-weight: 700
+    transition: all 0.3s ease-in-out
+
+html > body > main > section > div > h2
+    font-size: 1.5em
+    margin: 0
+    font-weight: 900
+    transition: all 0.3s ease-in-out
+
+html > body > main > section > p
+    font-size: 3.5em
+    margin: 0
+
+html > body > main > section > div
+    display: flex
+    flex-direction: row
+    justify-content: center
+    gap: 150px
+    width: unquote(-moz-available)
+
+html > body > main > section > div.carteProjets > article
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 15px
+    max-width: 250px
+    border: 2px solid $border-1
+    border-radius: 23px
+    align-items: center
+    transition: all 0.3s ease-in-out
+
+html > body > main > section > div.carteProjets > article:hover
+    transform: translateY(-0.25rem)
+    transition: transform .4s ease-in-out
+    box-shadow: 0 0 20px 5px $border-2
+
+html > body > main > section > div.carteProjets > article > h3
+    text-align: center
+    font-weight: bolder
+    transition: all 0.3s ease-in-out
+
+html > body > main > section > div.carteProjets > article > p
+    text-align: center
+    margin-bottom: 8px
+    transition: all 0.3s ease-in-out
+
+html > body > main > section > div.carteProjets > article > figure
+    margin-top: 0
+    margin-bottom: 8px
+
+strong
+    color: $text-2
+    font-weight: 900
+
+button
+    cursor: pointer
+
+.bouton 
+    border: .25em solid $glow-color
+    padding: 1em 3em
+    color: $glow-color
+    font-size: 15px
+    font-weight: bold
+    font-family: inherit
+    background-color: $btn-color
+    border-radius: 1em
+    outline: none
+    box-shadow: 0 0 1em .25em $glow-color //, 0 0 4em 1em $glow-spread-color, inset 0 0 .75em .25em $glow-color
+    //text-shadow: 0 0 .5em $glow-color
+    position: relative
+    transition: all 0.3s
+
+a
+    text-decoration: none
+    color: inherit
+
+// glow effect on the bottom
+ 
+//button::after 
+//    pointer-events: none
+//    content: ""
+//    position: absolute
+//    top: 120%
+//    left: 0
+//    height: 100%
+//    width: 100%
+//    background-color: $glow-spread-color
+//    filter: blur(2em)
+//    opacity: 0.7
+//    transform: perspective(1.5em) rotateX(35deg) scale(1, .6)
+   
+.bouton:hover 
+    color:  $text1 // $btn-color
+    background-color: $glow-color
+    box-shadow: 0 0 1em .25em $glow-color, 0 0 4em 2em $glow-spread-color, inset 0 0 .75em .25em $glow-color
+   
+.bouton:active 
+    box-shadow: 0 0 0.6em .25em $glow-color, 0 0 2.5em 2em $glow-spread-color, inset 0 0 .5em .25em $glow-color
+
+.accueil
+    height: 90vh /* 100vh si FP on*/
+    /*padding-bottom: 15vh;*/
+
+.btn
+    background: none
+    border: none
+
+//.secondaire
+//    height: 25vh // 50vh si FP on
+
+.img
+    width: 252.0px //240
+    height: 168.0px //160
+    border-radius: 8px
+    margin: 0
+
+
+.footer
+    display: flex
+    justify-content: center
+    align-items: center
+    bottom: 0
+
+.social
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: $background-2
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: background-color .3s ease
+
+.logo
+    width: 30px
+    height: 30px
+
+.socialImg
+    width: 28px
+    height: 28px
+
+.carteResau
+    display: flex
+    flex-direction: row
+    //width: 200px
+    gap: 8px
+    transition: all 0.3s ease-in-out
+
+.carteResau > a  /* Petite pastille des réseaux sociaux */
+    display: flex
+    //padding: 10px 16px
+    height: 72px
+    width: 72px
+    justify-content: center
+    align-items: center
+    gap: 8px
+    border-radius: 50%
+    background: $background-2
+    text-decoration: none
+    color:  $text1
+    transition: all 0.3s ease-in-out
+
+.carteResau > a > svg
+    fill: $primary
+    transition: all 0.3s ease-in-out
+
+.carteResau > a:hover 
+    background: $gradient-1
+
+.carteProjets
+    padding: 0
+
+#titreSecondaire
+    font-size: 1em
+    font-weight: 900
+    color:  $text1
+
+#projets
+    align-items: center
+
+.slide-in-left 
+    -webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-3-23 17:10:43
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-left 
+    0% 
+      -webkit-transform: translateX(-1000px)
+              transform: translateX(-1000px)
+      opacity: 0
+    100% 
+      -webkit-transform: translateX(0)
+              transform: translateX(0)
+      opacity: 1
+
+  @keyframes slide-in-left 
+    0% 
+      -webkit-transform: translateX(-1000px)
+              transform: translateX(-1000px)
+      opacity: 0
+
+    100% 
+      -webkit-transform: translateX(0)
+              transform: translateX(0)
+      opacity: 1
+
+/*****************************************************************************************************/
+
+@media screen and (max-width: 600px) 
+    html > body > main > section > h1
+        font-size: 3.5em
+        margin: 0
+        font-weight: 700
+        text-align: center
+
+    html > body > main > section > div > h2
+        font-size: 1.5em
+        margin: 0
+        font-weight: 900
+    
+    
+    html > body > main > section > p
+        font-size: 1.5em
+        margin: 0
+        text-align: center
+    
+
+    html > body > main > section > div
+        flex-direction: column
+        gap: 25px
+    
+    html > body > main > section.accueil
+        max-width: 100%
+        align-items: center
+    
+    .carteResau
+        width: 100%
+        justify-content: center
