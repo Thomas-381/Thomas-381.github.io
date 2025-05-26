@@ -4,40 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="Update .gitignore, add for webstorm IDE">
+    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dev" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/MegaSAE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Projet_Depeches.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Projet_Econocom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/SEA_BDD_Titanic(3 2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/SEA_BDD_Titanic.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ServeurSAE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Site econocom(3 2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/Javafx.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/Namemc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/Rlogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/css3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/database.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/discord.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/html5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/java.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/javascript.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/markdown.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/php.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo/postgresql.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/projets.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/Contact.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/Index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/Projets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +25,16 @@
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -214,6 +202,13 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/twig/markdown-extra" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -227,30 +222,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "symfony",
-    "last_opened_file_path": "/home/rthomas/Code/Thomas-381.github.io",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.serveur web.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;symfony&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rthomas/Code/Thomas-381.github.io&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Symfony2.SettingsForm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/default" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="scss" />
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
+    <configuration name="serveur web" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="symfony server:start --no-tls" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
       <method v="2" />
     </configuration>
   </component>
@@ -276,7 +294,11 @@
       <workItem from="1747900814529" duration="641000" />
       <workItem from="1747901461687" duration="6000" />
       <workItem from="1747931703074" duration="276000" />
-      <workItem from="1747931984071" duration="57000" />
+      <workItem from="1747931984071" duration="11101000" />
+      <workItem from="1747996231881" duration="2000" />
+      <workItem from="1748180886260" duration="4976000" />
+      <workItem from="1748244306931" duration="10000" />
+      <workItem from="1748258840519" duration="5469000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore, add for webstorm IDE">
       <option name="closed" value="true" />
@@ -286,18 +308,38 @@
       <option name="project" value="LOCAL" />
       <updated>1732174877246</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1747932660463</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747932660463</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="Update .gitignore, add for webstorm IDE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore, add for webstorm IDE" />
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

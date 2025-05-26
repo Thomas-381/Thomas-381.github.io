@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Projet{% endblock %}
+
+{% block body %}
+<div class="card col-md-6 offset-3">
+    <div class="card-header w-100 d-flex justify-content-center align-items-center">
+        <a class="btn-back text-secondary" href="{{ path('app_projet_liste') }}">
+            <i class="fas fa-2x fa-arrow-circle-left"></i>
+        </a>
+        <h3>
+            <i class="fas fa-link"></i>
+            Modifier un Projet
+        </h3>
+    </div>
+    <div class="card-body w-100 d-flex justify-content-center align-items-center">
+    {{ include('projet/_form.html.twig', {'button_label': 'Update'}) }}
+    </div>
+    {{ include('projet/_delete_form.html.twig') }}
+</div>
+{% endblock %}

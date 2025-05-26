@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PS-251.25410.148">
+    <data-source name="portfolio@localhost" uuid="de1dadf9-996c-4310-a2f3-22724ea3b81f">
+      <database-info product="PostgreSQL" version="16.9 (Ubuntu 16.9-0ubuntu0.24.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="16.9" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>test</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="portfolio">
+            <node kind="schema">
+              <name qname="@" />
+              <name qname="public" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>
