@@ -22,11 +22,11 @@ class Ide
      * @var Collection<int, Langage>
      */
     #[ORM\ManyToMany(targetEntity: Langage::class, inversedBy: 'ides')]
-    private Collection $Langage;
+    private Collection $langage;
 
     public function __construct()
     {
-        $this->Langage = new ArrayCollection();
+        $this->langage = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -51,13 +51,13 @@ class Ide
      */
     public function getLangage(): Collection
     {
-        return $this->Langage;
+        return $this->langage;
     }
 
     public function addLangage(Langage $langage): static
     {
-        if (!$this->Langage->contains($langage)) {
-            $this->Langage->add($langage);
+        if (!$this->langage->contains($langage)) {
+            $this->langage->add($langage);
         }
 
         return $this;
@@ -65,7 +65,7 @@ class Ide
 
     public function removeLangage(Langage $langage): static
     {
-        $this->Langage->removeElement($langage);
+        $this->langage->removeElement($langage);
 
         return $this;
     }

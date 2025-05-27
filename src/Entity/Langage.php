@@ -30,8 +30,14 @@ class Langage
     /**
      * @var Collection<int, Ide>
      */
-    #[ORM\ManyToMany(targetEntity: Ide::class, mappedBy: 'Langage')]
+    #[ORM\ManyToMany(targetEntity: Ide::class, mappedBy: 'langage')]
     private Collection $ides;
+
+    #[ORM\Column(length: 1023, nullable: false)]
+    private ?string $visuel = null;
+
+    #[ORM\Column(length: 16, nullable: true)]
+    private ?string $couleur = null;
 
     public function __construct()
     {
@@ -118,6 +124,30 @@ class Langage
         if ($this->ides->removeElement($ide)) {
             $ide->removeLangage($this);
         }
+
+        return $this;
+    }
+
+    public function getVisuel(): ?string
+    {
+        return $this->visuel;
+    }
+
+    public function setVisuel(?string $visuel): static
+    {
+        $this->visuel = $visuel;
+
+        return $this;
+    }
+
+    public function getCouleur(): ?string
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(?string $couleur): static
+    {
+        $this->couleur = $couleur;
 
         return $this;
     }
