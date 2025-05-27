@@ -50,15 +50,20 @@ final class LangageController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_langage_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Langage $langage, EntityManagerInterface $entityManager): Response
+    #[Route(
+        path: '/modifier/{id}',
+        name: 'app_langage_edit',
+        methods: ['GET', 'POST']
+    )]
+    public function edit(Request $request, LangageRepository $langageRepository, EntityManagerInterface $entityManager, int $id): Response
     {
+        $langage = $langageRepository->find($id);
         $form = $this->createForm(LangageForm::class, $langage);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($langage);
             $entityManager->flush();
-
             return $this->redirectToRoute('app_langage_index', [], Response::HTTP_SEE_OTHER);
         }
 

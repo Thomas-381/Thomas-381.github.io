@@ -29,7 +29,7 @@ final class DefaultController extends AbstractController
     )]
     public function contact(): Response
     {
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/contact.html.twig', [
         ]);
     }
 }
