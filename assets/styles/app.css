@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,75..125,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+html > body {
+    font-family: 'Nunito', 'Nunito Sans', sans-serif;
+}
+
 a.btn-back {
     position: absolute;
     left: 10px;
@@ -13,4 +18,16 @@ div.card.col-md-6.offset-3 > div.card-body > form {
         align-items: center;
         gap: .1rem;
     }
+}
+figure > svg {
+    width: 45px;
+    height: 45px;
+}
+
+main > div.carteProjets > div:nth-child(odd){
+    flex-direction: row;
+}
+
+main > div.carteProjets > div:nth-child(even){
+    flex-direction: row-reverse;
 }

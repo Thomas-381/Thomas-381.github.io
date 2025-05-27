@@ -209,21 +209,21 @@ button::after {
 .accueil{
     height: 90vh;/* 100vh si FP on*/
     /*padding-bottom: 15vh;*/
-}
+}/*
 .btn{
     background: none;
     border: none;
-}
+}*/
 /*
 .secondaire{
     height: 25vh; /* 50vh si FP on
 }
 */
 .img{
-    width: 252.0px; /*240*/
-    height: 168.0px; /*160*/
+    /*width: 252.0px; /*240*/
+    height: 168px; /*160*/
     border-radius: 8px;
-    margin: 0px;
+    margin: 0;
 }
 
 footer{
