@@ -85,14 +85,14 @@
                          <p>{{ projet.description|markdown_to_html }}</p>
                          <figure>
                              {% for langage in projet.langage %}
-                                <img src="{{ asset("logo/#{langage.nom}.svg") }}" alt="{{ langage.nom }}" class="logo">
+                                 {{ ux_icon('logo:' ~ langage.visuel, {color: langage.couleur}) }}
                              {% endfor %}
                          </figure>
                      </article>
                 {% endfor %}
         </div>
         <div>
-            <a href="page/projets.html">
+            <a href="{{ path('app_projet_index') }}">
                 <button class="bouton" id="titreSecondaire"> Voir d'autres projets </button>
             </a>
         </div>

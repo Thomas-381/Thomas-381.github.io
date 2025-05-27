@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
+                <th>Visuel</th>
                 <th>Version</th>
                 <th>actions</th>
             </tr>
@@ -19,6 +20,8 @@
             <tr>
                 <td>{{ langage.id }}</td>
                 <td>{{ langage.nom }}</td>
+                <td>{{ langage.visuel }}</td>
+                <td>{{ langage.couleur }}</td>
                 <td>{{ langage.version }}</td>
                 <td>
                     <a href="{{ path('app_langage_show', {'id': langage.id}) }}">show</a>

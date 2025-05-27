@@ -19,6 +19,12 @@
                 <th>Version</th>
                 <td>{{ langage.version }}</td>
             </tr>
+            <tr>
+                <th>Ide</th>
+                {% for ide in langage.ides %}
+                    <td>{{ ide.nom }}</td>
+                {% endfor %}
+            </tr>
         </tbody>
     </table>
 
