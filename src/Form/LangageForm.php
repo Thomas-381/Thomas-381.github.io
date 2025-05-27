@@ -5,6 +5,8 @@ namespace App\Form;
 use App\Entity\Ide;
 use App\Entity\Langage;
 use App\Entity\Projet;
+use Symfony\Component\Form\Extension\Core\Type\ColorType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -15,8 +17,18 @@ class LangageForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom')
-            ->add('version')
+            ->add('nom', TextType::class,)
+            ->add('version', TextType::class, [
+                'required' => false
+            ])
+            ->add('visuel', TextType::class, [
+                'required' => true
+                ]
+            )
+            ->add('couleur', ColorType::class, [
+                'required' => false,
+                'empty_data' => '#000000',
+            ])/*
             ->add('projets', EntityType::class, [
                 'required' => false,
                 'class' => Projet::class,
@@ -30,7 +42,7 @@ class LangageForm extends AbstractType
                 'choice_label' => 'nom',
                 'expanded' => true,
                 'multiple' => true,
-            ])
+            ])*/
         ;
     }
 
