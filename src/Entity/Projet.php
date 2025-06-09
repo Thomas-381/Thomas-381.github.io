@@ -42,6 +42,9 @@ class Projet
     #[ORM\Column(length: 1023)]
     private ?string $visuel = null;
 
+    #[ORM\Column(length: 1023, nullable: true)]
+    private ?string $lienGithub = null;
+
     public function __construct()
     {
         $this->langage = new ArrayCollection();
@@ -156,6 +159,18 @@ class Projet
     public function setVisuel(string $visuel): static
     {
         $this->visuel = $visuel;
+
+        return $this;
+    }
+
+    public function getLienGithub(): ?string
+    {
+        return $this->lienGithub;
+    }
+
+    public function setLienGithub(?string $lienGithub): static
+    {
+        $this->lienGithub = $lienGithub;
 
         return $this;
     }

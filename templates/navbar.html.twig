@@ -1,22 +1,22 @@
 {# barre de navigation  #}
 <nav class="navbar navbar-expand-md fixed-top flex-row justify-content-center align-items-center bg-body-tertiary gap-md-3">
-    <a class="navbar-brand navbar-b" href="{{ path('app_default_index') }}">
+    <a class="navbar-brand navbar-b" href="{{ path('app_default_index') }}#accueil">
         <i class="fas fa-home"></i>
         Accueil
     </a>
-    <ul class="navbar-nav gap-4">
+    {#<ul class="navbar-nav gap-4">#}
         {% if is_granted('ROLE_ADMIN') %}
-            <li class="nav-item dropdown" id="dropDownCompte">
+            <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
                 <a id="btnDropDownProjet" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                     <i class="fas fa-clipboard"></i> Projets
                 </a>
                 <div id="dropdownProjetAActiver" class="dropdown-menu" style="min-width: 5rem;">
                     <a class="dropdown-item" href="{{ path('app_projet_new') }}">Crée un nouveau projet</a>
-                    <a class="dropdown-item" href="{{ path('app_projet_index') }}">Liste des projets (pub)</a>
                     <a class="dropdown-item " href="{{ path('app_projet_liste') }}">Liste des projets (admin)</a>
+                    <a class="dropdown-item" href="{{ path('app_projet_index') }}">Liste des projets (pub)</a>
                 </div>
             </li>
-            <li class="nav-item dropdown" id="dropDownCompte">
+            <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
                 <a id="btnDropDownEditeur" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                     <i class="fas fa-language"></i> Langages
                 </a>
@@ -25,7 +25,7 @@
                     <a class="dropdown-item " href="{{ path('app_langage_index') }}">Liste des langages</a>
                 </div>
             </li>
-            <li class="nav-item dropdown" id="dropDownCompte">
+            <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
                 <a id="btnDropDownEditeur" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                     <i class="fas fa-file-lines"></i> Ide
                 </a>
@@ -35,14 +35,14 @@
                 </div>
             </li>
         {% else %}
-            <li class="nav-item">
-                <a class=" nav-link" href="{{ path('app_projet_index') }}"><i class="fas fa-clipboard"></i> Projets</a>
+            <li class="navbar-nav nav-item">
+                <a class=" nav-link" href="#partieProjet"><i class="fas fa-clipboard"></i> Projets</a>
             </li>
         {% endif %}
-        <li class="nav-item">
-            <a class=" nav-link" href="{{ path('app_default_contact') }}">Contact</a>
+        <li class="navbar-nav nav-item">
+            <a class=" nav-link" href="#formulaireContact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </li>
-        <li class="nav-item dropdown" id="dropDownCompte">
+        <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
             <a id="btnDropDownEditeur" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                 <i class="fas fa-user"></i> Compte
             </a>
@@ -61,5 +61,5 @@
                 <img src="{{ asset('logo/dark.png') }}" id="mode-light" alt="dark">
             </button>
         </li>#}
-    </ul>
+    {#</ul>#}
 </nav>

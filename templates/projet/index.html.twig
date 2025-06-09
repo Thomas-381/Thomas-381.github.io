@@ -5,28 +5,37 @@
 {% block body %}
     <h1>Projet index</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom</th>
+                <th>Visuel</th>
                 <th>Description</th>
+                <th>DescriptionLongue</th>
                 <th>Duree</th>
                 <th>Equipe</th>
+                <th>Important</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for projet in projets %}
             <tr>
-                <td>{{ projet.id }}</td>
                 <td>{{ projet.nom }}</td>
+                <td>{{ projet.visuel }}</td>
                 <td>{{ projet.description }}</td>
+                <td>{{ projet.descriptionLongue }}</td>
                 <td>{{ projet.duree }}</td>
                 <td>{{ projet.equipe }}</td>
+                <td>{{ projet.important }}</td>
                 <td>
-                    <a href="{{ path('app_projet_show', {'id': projet.id}) }}">show</a>
-                    <a href="{{ path('app_projet_edit', {'id': projet.id}) }}">edit</a>
+                    <div class="d-flex flex-row align-items-center justify-content-start">
+                        <a class="color-inherit" href="{{ path('app_projet_edit', {'id': projet.id}) }}" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" {#data-bs-#}title="Modifier {#<b>#}{{ projet.nom }}{#</b>#}"><i class="fas fa-cog text-muted"></i></a>
+                        <form method="post" action="{{ path('app_projet_delete', {'id': projet.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce Projet ?');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ projet.id) }}">
+                            <button class="btn" type="submit" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" {#data-bs-#}title="Supprimer {#<b>#}{{ projet.nom }}{#</b>#}"><i class="fas fa-trash text-muted"></i></button>
+                        </form>
+                    </div>
                 </td>
             </tr>
         {% else %}

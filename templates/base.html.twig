@@ -21,10 +21,17 @@
         {% include "navbar.html.twig" %}
         <!-- fin de la navbar -->
         <!-- début du block body -->
-        <main class="mt-5 pt-5">
+        <main class="mt-5 pt-5" data-bs-spy="scroll" data-bs-smooth-scroll="true">
             {% block body %}
             {% endblock %}
         </main>
         <!-- fin du block body -->
+        <!-- début du footer -->
+        {% block footer %}
+            <footer class="d-flex flex-column justify-content-start align-items-center">
+                <h5>© 2025 Thomas REYMOND, tous droits réservés.</h5>
+            </footer>
+        {% endblock %}
+        <!-- fin du footer -->
     </body>
 </html>

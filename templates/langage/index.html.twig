@@ -8,9 +8,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom</th>
                 <th>Visuel</th>
+                <th>Couleur</th>
                 <th>Version</th>
                 <th>actions</th>
             </tr>
@@ -18,14 +18,18 @@
         <tbody>
         {% for langage in langages %}
             <tr>
-                <td>{{ langage.id }}</td>
                 <td>{{ langage.nom }}</td>
                 <td>{{ langage.visuel }}</td>
                 <td>{{ langage.couleur }}</td>
                 <td>{{ langage.version }}</td>
                 <td>
-                    <a href="{{ path('app_langage_show', {'id': langage.id}) }}">show</a>
-                    <a href="{{ path('app_langage_edit', {'id': langage.id}) }}">edit</a>
+                    <div class="d-flex flex-row align-items-center justify-content-start">
+                        <a class="color-inherit" href="{{ path('app_langage_edit', {'id': langage.id}) }}" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" {#data-bs-#}title="Modifier {#<b>#}{{ langage.nom }}{#</b>#}"><i class="fas fa-cog text-muted"></i></a>
+                        <form method="post" action="{{ path('app_langage_delete', {'id': langage.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce Langage ?');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ langage.id) }}">
+                            <button class="btn" type="submit" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" {#data-bs-#}title="Supprimer {#<b>#}{{ langage.nom }}{#</b>#}"><i class="fas fa-trash text-muted"></i></button>
+                        </form>
+                    </div>
                 </td>
             </tr>
         {% else %}

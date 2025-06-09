@@ -96,20 +96,16 @@ html > body > main > section > div > h2{
     transition: all 0.3s ease-in-out;
 }
 
-html > body > main > section > p{
-    font-size: 3.5em;
-    margin: 0px;
-}
 html > body > main > section > div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    gap: 150px;
+    /*gap: 150px;*/
     width: -moz-available;
 }
 
-html > body > main > section > div.carteProjets > article{
+html > body > main > section > div.carteProjets > .carte{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,25 +118,25 @@ html > body > main > section > div.carteProjets > article{
     overflow: hidden;
 }
 
-html > body > main > section > div.carteProjets > article:hover{
+html > body > main > section > div.carteProjets > .carte:hover{
     transform: translateY(-0.25rem);
     transition: transform .4s ease-in-out;
     box-shadow: 0 0 20px 5px var(--border-2);
 }
 
-html > body > main > section > div.carteProjets > article > h3{
+html > body > main > section > div.carteProjets > .carte > h3{
     text-align: center;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
 }
 
-html > body > main > section > div.carteProjets > article > p{
+html > body > main > section > div.carteProjets > .carte > p{
     text-align: center;
     margin-bottom: 8px;
     transition: all 0.3s ease-in-out;
 }
 
-html > body > main > section > div.carteProjets > article > figure{
+html > body > main > section > div.carteProjets > .carte > figure{
     margin-top: 0;
     margin-bottom: 8px;
 }
@@ -171,10 +167,6 @@ button{
     transition: all 0.3s;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
 /* glow effect on the bottom*/
 /*
 button::after {
@@ -231,7 +223,7 @@ footer{
     justify-content: center;
     align-items: center;
     bottom: 0;
-    height: 25vh;
+    /*height: 25vh;*/
 }
 
 .social{

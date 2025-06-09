@@ -9,8 +9,10 @@ a.btn-back {
 }
 
 div.card.col-md-6.offset-3 > div.card-body > form {
-    width: 50%;
-
+    > div {
+        width: 100%;
+        padding: 0 3rem 0 3rem;
+    }
     div.mb-3 {
         display: flex;
         flex-direction: column;
@@ -20,14 +22,33 @@ div.card.col-md-6.offset-3 > div.card-body > form {
     }
 }
 figure > svg {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
 }
 
-main > div.carteProjets > div:nth-child(odd){
+#partieProjet > div > a:nth-child(odd){
     flex-direction: row;
 }
 
-main > div.carteProjets > div:nth-child(even){
+#partieProjet > div > a:nth-child(even){
     flex-direction: row-reverse;
+}
+a.carte {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+html > body > main > section > .sousTitre{
+    font-size: 2.5rem;
+    margin: 0;
+}
+html > body > main > section > p{
+    font-size: 1.25rem;
+    margin: 0;
+}
+#formulaireContact .mb-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

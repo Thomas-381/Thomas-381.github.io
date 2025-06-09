@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
+use App\Form\ContactForm;
 use App\Repository\ProjetRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +20,15 @@ final class DefaultController extends AbstractController
     )]
     public function index(ProjetRepository $projetRepository): Response
     {
-        $projets = $projetRepository->findBy(['important' => 'true']);
+        $contact = new Contact();
+        $form = $this->createForm(ContactForm::class, $contact, [
+            'action' => $this->generateUrl('app_contact_new'),
+            'method' => 'POST',
+        ]);
+        $projets = $projetRepository->findAll();
         return $this->render('default/index.html.twig', [
                 'projets' => $projets,
+                'form' => $form,
         ]);
     }
     #[Route(

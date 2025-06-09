@@ -7,16 +7,28 @@
 {% block body %}
 <div class="carteProjets w-100 d-flex flex-column gap-3 px-md-5 align-items-center">
     {% for projet in projets %}
-        <div class="card border-primary w-75">
+        <div id="{{ projet.id }}" class="card border-primary w-75 p-3 d-flex align-items-center justify-content-center gap-md-4 rounded-5-">
             <img src="{{ asset(projet.visuel) }}" class="img" alt="{{ projet.nom }}">
-            <div class="card-body">
+            <div class="card-body p-0">
                 <h3>{{ projet.nom }}</h3>
-                <p>{{ projet.descriptionLongue }}</p>
-                <figure>
-                    {% for langage in projet.langage %}
-                        {{ ux_icon('logo:' ~ langage.visuel, {color: langage.couleur}) }}
-                    {% endfor %}
-                </figure>
+                <p>{{ projet.descriptionLongue|markdown_to_html }}</p>
+                <div class="p-0 d-flex flex-row gap-4 justify-content-start align-items-center">
+                    <figure class="m-0 d-flex flex-row gap-2 justify-content-center align-items-center">
+                        {% for langage in projet.langage %}
+                            {{ ux_icon('logo:' ~ langage.visuel, {color: langage.couleur}) }}
+                        {% endfor %}
+                    </figure>
+
+                    <div><i class="fas fa-clock"></i> {{ projet.duree }}</div>
+                    <div><i class="fas fa-users-gear"></i> {{ projet.equipe }}</div>
+                    {% if projet.lienGithub %}
+                        <div>
+                            <a class="btn btn-sm btn-outline-primary rounded-2" href="{{ projet.lienGithub }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+                                Voir sur GitHub
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     {% endfor %}

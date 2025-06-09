@@ -13,9 +13,10 @@
             Modifier un Projet
         </h3>
     </div>
-    <div class="card-body w-100 d-flex justify-content-center align-items-center">
-    {{ include('projet/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="card-body w-100 d-flex flex-column justify-content-center align-items-center">
+        {{ include('projet/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        <br>
+        {{ include('projet/_delete_form.html.twig') }}
     </div>
-    {{ include('projet/_delete_form.html.twig') }}
 </div>
 {% endblock %}
