@@ -12,7 +12,7 @@
 4||10|C|G
 4||10|T|G</Grants>
       <ServerVersion>16.9</ServerVersion>
-      <StartupTime>1748244167</StartupTime>
+      <StartupTime>1749493734</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -4347,7 +4347,7 @@ true posixrules
     </table>
     <table id="281" parent="273" name="ide">
       <ObjectId>25581</ObjectId>
-      <StateNumber>2524</StateNumber>
+      <StateNumber>2610</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>test</OwnerName>
     </table>
@@ -4359,7 +4359,7 @@ true posixrules
     </table>
     <table id="283" parent="273" name="langage">
       <ObjectId>25595</ObjectId>
-      <StateNumber>2524</StateNumber>
+      <StateNumber>2581</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>test</OwnerName>
     </table>
@@ -4446,7 +4446,21 @@ true posixrules
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="296" parent="281" name="ide_pkey">
+    <column id="296" parent="281" name="visuel">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>2610</StateNumber>
+      <StoredType>varchar(2047)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="297" parent="281" name="couleur">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>2610</StateNumber>
+      <StoredType>varchar(16)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="298" parent="281" name="ide_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25585</ObjectId>
@@ -4455,28 +4469,28 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="297" parent="281" name="ide_pkey">
+    <key id="299" parent="281" name="ide_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25586</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25585</UnderlyingIndexId>
     </key>
-    <column id="298" parent="282" name="ide_id">
+    <column id="300" parent="282" name="ide_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="299" parent="282" name="langage_id">
+    <column id="301" parent="282" name="langage_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="300" parent="282" name="fk_53dcad82677335af">
+    <foreign-key id="302" parent="282" name="fk_53dcad82677335af">
       <ColNames>ide_id</ColNames>
       <ObjectId>25645</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4484,7 +4498,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25581</RefTableId>
     </foreign-key>
-    <foreign-key id="301" parent="282" name="fk_53dcad82957bb53c">
+    <foreign-key id="303" parent="282" name="fk_53dcad82957bb53c">
       <ColNames>langage_id</ColNames>
       <ObjectId>25650</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4492,7 +4506,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25595</RefTableId>
     </foreign-key>
-    <index id="302" parent="282" name="ide_langage_pkey">
+    <index id="304" parent="282" name="ide_langage_pkey">
       <ColNames>ide_id
 langage_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4502,26 +4516,26 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="303" parent="282" name="idx_53dcad82677335af">
+    <index id="305" parent="282" name="idx_53dcad82677335af">
       <ColNames>ide_id</ColNames>
       <ObjectId>25592</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="304" parent="282" name="idx_53dcad82957bb53c">
+    <index id="306" parent="282" name="idx_53dcad82957bb53c">
       <ColNames>langage_id</ColNames>
       <ObjectId>25593</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="305" parent="282" name="ide_langage_pkey">
+    <key id="307" parent="282" name="ide_langage_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25591</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25590</UnderlyingIndexId>
     </key>
-    <column id="306" parent="283" name="id">
+    <column id="308" parent="283" name="id">
       <DefaultExpression>nextval(&apos;langage_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4530,21 +4544,36 @@ langage_id</ColNames>
       <SequenceId>25594</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="307" parent="283" name="nom">
+    <column id="309" parent="283" name="nom">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="308" parent="283" name="version">
+    <column id="310" parent="283" name="version">
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>3</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(16)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="309" parent="283" name="langage_pkey">
+    <column id="311" parent="283" name="visuel">
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>2581</StateNumber>
+      <StoredType>varchar(1023)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="312" parent="283" name="couleur">
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+      <Position>5</Position>
+      <StateNumber>2581</StateNumber>
+      <StoredType>varchar(16)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="313" parent="283" name="langage_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25600</ObjectId>
@@ -4553,14 +4582,14 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="310" parent="283" name="langage_pkey">
+    <key id="314" parent="283" name="langage_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25601</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25600</UnderlyingIndexId>
     </key>
-    <column id="311" parent="284" name="id">
+    <column id="315" parent="284" name="id">
       <DefaultExpression>nextval(&apos;messenger_messages_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4569,28 +4598,28 @@ langage_id</ColNames>
       <SequenceId>25630</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="312" parent="284" name="body">
+    <column id="316" parent="284" name="body">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="313" parent="284" name="headers">
+    <column id="317" parent="284" name="headers">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="314" parent="284" name="queue_name">
+    <column id="318" parent="284" name="queue_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(190)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="315" parent="284" name="created_at">
+    <column id="319" parent="284" name="created_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <NotNull>1</NotNull>
       <Position>5</Position>
@@ -4598,7 +4627,7 @@ langage_id</ColNames>
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="316" parent="284" name="available_at">
+    <column id="320" parent="284" name="available_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <NotNull>1</NotNull>
       <Position>6</Position>
@@ -4606,7 +4635,7 @@ langage_id</ColNames>
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="317" parent="284" name="delivered_at">
+    <column id="321" parent="284" name="delivered_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>7</Position>
@@ -4614,7 +4643,7 @@ langage_id</ColNames>
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="318" parent="284" name="messenger_messages_pkey">
+    <index id="322" parent="284" name="messenger_messages_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25638</ObjectId>
@@ -4623,7 +4652,7 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="319" parent="284" name="idx_75ea56e0fb7336f0">
+    <index id="323" parent="284" name="idx_75ea56e0fb7336f0">
       <ColNames>queue_name</ColNames>
       <ObjectId>25640</ObjectId>
       <StateNumber>2524</StateNumber>
@@ -4632,32 +4661,32 @@ langage_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="320" parent="284" name="idx_75ea56e0e3bd61ce">
+    <index id="324" parent="284" name="idx_75ea56e0e3bd61ce">
       <ColNames>available_at</ColNames>
       <ObjectId>25641</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="321" parent="284" name="idx_75ea56e016ba31db">
+    <index id="325" parent="284" name="idx_75ea56e016ba31db">
       <ColNames>delivered_at</ColNames>
       <ObjectId>25642</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="322" parent="284" name="messenger_messages_pkey">
+    <key id="326" parent="284" name="messenger_messages_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25639</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25638</UnderlyingIndexId>
     </key>
-    <trigger id="323" parent="284" name="notify_trigger">
+    <trigger id="327" parent="284" name="notify_trigger">
       <Events>IU</Events>
       <ObjectId>25644</ObjectId>
       <StateNumber>2524</StateNumber>
       <CallRoutineId>25643</CallRoutineId>
     </trigger>
-    <column id="324" parent="285" name="id">
+    <column id="328" parent="285" name="id">
       <DefaultExpression>nextval(&apos;projet_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4666,56 +4695,56 @@ langage_id</ColNames>
       <SequenceId>25602</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="325" parent="285" name="nom">
+    <column id="329" parent="285" name="nom">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2525</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="326" parent="285" name="description">
+    <column id="330" parent="285" name="description">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2525</StateNumber>
       <StoredType>varchar(160)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="327" parent="285" name="duree">
+    <column id="331" parent="285" name="duree">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="328" parent="285" name="equipe">
+    <column id="332" parent="285" name="equipe">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>2525</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="329" parent="285" name="description_longue">
+    <column id="333" parent="285" name="description_longue">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>2525</StateNumber>
       <StoredType>varchar(2047)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="330" parent="285" name="important">
+    <column id="334" parent="285" name="important">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>2537</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <column id="331" parent="285" name="visuel">
+    <column id="335" parent="285" name="visuel">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>2561</StateNumber>
       <StoredType>varchar(1023)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="332" parent="285" name="projet_pkey">
+    <index id="336" parent="285" name="projet_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25609</ObjectId>
@@ -4724,28 +4753,28 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="333" parent="285" name="projet_pkey">
+    <key id="337" parent="285" name="projet_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25610</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25609</UnderlyingIndexId>
     </key>
-    <column id="334" parent="286" name="projet_id">
+    <column id="338" parent="286" name="projet_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="335" parent="286" name="langage_id">
+    <column id="339" parent="286" name="langage_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="336" parent="286" name="fk_4e7ab757c18272">
+    <foreign-key id="340" parent="286" name="fk_4e7ab757c18272">
       <ColNames>projet_id</ColNames>
       <ObjectId>25655</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4753,7 +4782,7 @@ langage_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25603</RefTableId>
     </foreign-key>
-    <foreign-key id="337" parent="286" name="fk_4e7ab757957bb53c">
+    <foreign-key id="341" parent="286" name="fk_4e7ab757957bb53c">
       <ColNames>langage_id</ColNames>
       <ObjectId>25660</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4761,7 +4790,7 @@ langage_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25595</RefTableId>
     </foreign-key>
-    <index id="338" parent="286" name="projet_langage_pkey">
+    <index id="342" parent="286" name="projet_langage_pkey">
       <ColNames>projet_id
 langage_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4771,26 +4800,26 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="339" parent="286" name="idx_4e7ab757c18272">
+    <index id="343" parent="286" name="idx_4e7ab757c18272">
       <ColNames>projet_id</ColNames>
       <ObjectId>25616</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="340" parent="286" name="idx_4e7ab757957bb53c">
+    <index id="344" parent="286" name="idx_4e7ab757957bb53c">
       <ColNames>langage_id</ColNames>
       <ObjectId>25617</ObjectId>
       <StateNumber>2524</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="341" parent="286" name="projet_langage_pkey">
+    <key id="345" parent="286" name="projet_langage_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25615</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2524</StateNumber>
       <UnderlyingIndexId>25614</UnderlyingIndexId>
     </key>
-    <column id="342" parent="287" name="id">
+    <column id="346" parent="287" name="id">
       <DefaultExpression>nextval(&apos;usager_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4799,42 +4828,42 @@ langage_id</ColNames>
       <SequenceId>25618</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="343" parent="287" name="username">
+    <column id="347" parent="287" name="username">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(180)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="344" parent="287" name="roles">
+    <column id="348" parent="287" name="roles">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>json|0s</StoredType>
       <TypeId>114</TypeId>
     </column>
-    <column id="345" parent="287" name="password">
+    <column id="349" parent="287" name="password">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="346" parent="287" name="nom">
+    <column id="350" parent="287" name="nom">
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>5</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(16)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="347" parent="287" name="prenom">
+    <column id="351" parent="287" name="prenom">
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>6</Position>
       <StateNumber>2524</StateNumber>
       <StoredType>varchar(16)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="348" parent="287" name="usager_pkey">
+    <index id="352" parent="287" name="usager_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25627</ObjectId>
@@ -4843,7 +4872,7 @@ langage_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="349" parent="287" name="uniq_identifier_username">
+    <index id="353" parent="287" name="uniq_identifier_username">
       <ColNames>username</ColNames>
       <ObjectId>25629</ObjectId>
       <StateNumber>2524</StateNumber>
@@ -4853,7 +4882,7 @@ langage_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="350" parent="287" name="usager_pkey">
+    <key id="354" parent="287" name="usager_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25628</ObjectId>
       <Primary>1</Primary>

@@ -21,6 +21,9 @@ div.card.col-md-6.offset-3 > div.card-body > form {
         gap: .1rem;
     }
 }
+#listeCompetence article {
+    max-width: 600px;
+}
 figure > svg {
     width: 35px;
     height: 35px;
@@ -36,6 +39,15 @@ figure > svg {
 a.carte {
     text-decoration: none !important;
     color: inherit !important;
+}
+
+.logoLangage{
+    width: 150px;
+    height: 122px;
+}
+.logoG {
+    width: 50px;
+    height: 50px;
 }
 
 html > body > main > section > .sousTitre{

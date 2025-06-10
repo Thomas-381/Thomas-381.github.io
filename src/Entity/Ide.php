@@ -24,6 +24,12 @@ class Ide
     #[ORM\ManyToMany(targetEntity: Langage::class, inversedBy: 'ides')]
     private Collection $langage;
 
+    #[ORM\Column(length: 2047)]
+    private ?string $visuel = null;
+
+    #[ORM\Column(length: 16)]
+    private ?string $couleur = null;
+
     public function __construct()
     {
         $this->langage = new ArrayCollection();
@@ -66,6 +72,30 @@ class Ide
     public function removeLangage(Langage $langage): static
     {
         $this->langage->removeElement($langage);
+
+        return $this;
+    }
+
+    public function getVisuel(): ?string
+    {
+        return $this->visuel;
+    }
+
+    public function setVisuel(string $visuel): static
+    {
+        $this->visuel = $visuel;
+
+        return $this;
+    }
+
+    public function getCouleur(): ?string
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(string $couleur): static
+    {
+        $this->couleur = $couleur;
 
         return $this;
     }

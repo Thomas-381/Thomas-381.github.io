@@ -76,10 +76,66 @@
             </a>-->
         </article>
     </section>
-    {#<section class="secondaire" id="competence">
-        <h2>Compétences</h2>
-
-    </section>#}
+    <section class="secondaire" id="competence">
+        <div>
+            <h2>Compétences</h2>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+            <p class="fs-5">Voici les langes que je maitrise</p>
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 w-50">
+                {% for langage in langages %}
+                    <div class="card d-flex flex-column align-items-center justify-content-center px-0 py-3 gap-md-3 border-primary rounded-3 logoLangage bg-opacity-10 bg-primary">
+                        {{ ux_icon('logo:' ~ langage.visuel, {color: langage.couleur, class: 'logoG'}) }}
+                        <h5>{{ langage.nom }}</h5>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+            <p class="fs-5">Voici les Outils et <abbr title="Environnement de Développement Intégré">EDI</abbr> que je maitrise et utilise au quotidien</p>
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 w-50">
+                {% for ide in ides %}
+                    <div class="card d-flex flex-column align-items-center justify-content-center px-0 py-3 gap-md-3 border-primary rounded-3 logoLangage bg-opacity-10 bg-primary">
+                        {{ ux_icon('logo:' ~ ide.visuel|lower, {color: ide.couleur, class: 'logoG'}) }}
+                        <h5>{{ ide.nom }}</h5>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+            <p class="fs-5">À travers une multitude de projets personnels, ainsi que grâce mon cursus, j'ai pu acquérir un certain nombre de compétences tél que : </p>
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-stretch gap-3 w-75" id="listeCompetence">
+                <article class="card">
+                    <h6 class="card-header w-100">{{ ux_icon('bxs:data', {class: 'logo'}) }} Administrer une base de données</h6>
+                    <ul class="card-body px-3 my-0">
+                        <li>Analyser et visualiser efficacement des données issues de plusieurs tables en utilisant des jointures complexes pour en extraire des informations pertinentes.</li>
+                        <li>Concevoir une base de données relationnelle complète en suivant un cahier des charges précis, incluant la mise en place de déclencheurs (triggers) pour automatiser certaines actions.</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h6 class="card-header w-100">{{ ux_icon('icon-park-outline:code-computer', {class: 'logo'}) }} Administrer un système informatique</h6>
+                    <ul class="card-body px-3 my-0">
+                        <li>Installer et configurer un système d'exploitation pour un serveur ou un poste de travail</li>
+                        <li>Création de script permettant l'optimisation de certainne tache (mise en production, ...)</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h6 class="card-header w-100">{{ ux_icon('simple-icons:devbox', {class: 'logo'}) }} Concevoir une application</h6>
+                    <ul class="card-body px-3 my-0">
+                        <li>Concevoir une application simple a l'aide d'un cahier des charges</li>
+                        <li>Réaliser des tests unitaires, fonctionnel, de non-regression de l'application a l'aide de framework (Mocha, C8, Cypress, Espresso, ...)</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h6 class="card-header w-100">{{ ux_icon("ri:team-fill", {class: 'logo'}) }} Collaborer dans une équipe informatique</h6>
+                    <ul class="card-body px-3 my-0">
+                        <li>Connaissance de logiciel de gestion de version (git) ainsi que des conventions de nommages de commit.</li>
+                        <li>Analyser un problème avec méthode et savoir demander en cas de difficultés</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
     <section class="secondaire" id="projets">
         <div>
             <h2>Mes Projets</h2>
@@ -116,6 +172,7 @@
                         </div>
                     </a>
                     <div class="collapse" id="collapse{{ projet.nom|trim|replace({' ': "_"}) }}">
+                        <p>{{ projet.description|markdown_to_html }}</p>
                         <div class="card-body d-flex flex-row align-items-center justify-content-start gap-4">
                             <div><i class="fas fa-clock"></i> {{ projet.duree }}</div>
                             <div><i class="fas fa-users-gear"></i> {{ projet.equipe }}</div>

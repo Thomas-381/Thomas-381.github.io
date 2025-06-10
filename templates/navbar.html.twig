@@ -4,6 +4,9 @@
         <i class="fas fa-home"></i>
         Accueil
     </a>
+    <li class="navbar-nav nav-item">
+        <a class=" nav-link" href="#competence"><i class="fa-solid fa-briefcase"></i> Compétence</a>
+    </li>
     {#<ul class="navbar-nav gap-4">#}
         {% if is_granted('ROLE_ADMIN') %}
             <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
@@ -39,9 +42,21 @@
                 <a class=" nav-link" href="#partieProjet"><i class="fas fa-clipboard"></i> Projets</a>
             </li>
         {% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <li class="navbar-nav nav-item dropdown" id="dropDownContact">
+            <a id="btnDropDownContact" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                <i class="fas fa-clipboard"></i> Contact
+            </a>
+            <div id="dropdownContactAActiver" class="dropdown-menu" style="min-width: 5rem;">
+                <a class="dropdown-item" href="{{ path('app_default_index') }}#formulaireContact">Crée un nouveau projet</a>
+                <a class="dropdown-item " href="{{ path('app_contact_index') }}">Liste des demandes de contact</a>
+            </div>
+        </li>
+    {% else %}
         <li class="navbar-nav nav-item">
             <a class=" nav-link" href="#formulaireContact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </li>
+    {% endif %}
         <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
             <a id="btnDropDownEditeur" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                 <i class="fas fa-user"></i> Compte

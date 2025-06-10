@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="Update Formulaire">
+    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="Update partie projet">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/de1dadf9-996c-4310-a2f3-22724ea3b81f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/de1dadf9-996c-4310-a2f3-22724ea3b81f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/logo/php.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/logo/php.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/symfony.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/logo/symfony.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/projet.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/projet.css.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProjetForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProjetForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ide.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ide.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/IdeForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/IdeForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/langage/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/langage/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projet/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projet/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projet/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projet/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet/liste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projet/liste.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,6 +249,7 @@
       <recent name="$PROJECT_DIR$/templates/projet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/icons/logo" />
       <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/templates/default" />
     </key>
@@ -314,7 +307,8 @@
       <workItem from="1748611948146" duration="5000" />
       <workItem from="1748958404236" duration="2986000" />
       <workItem from="1749476371685" duration="7612000" />
-      <workItem from="1749493932273" duration="1429000" />
+      <workItem from="1749493932273" duration="6018000" />
+      <workItem from="1749540093391" duration="2347000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore, add for webstorm IDE">
       <option name="closed" value="true" />
@@ -420,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748352444202</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update partie projet">
+      <option name="closed" value="true" />
+      <created>1749495531746</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749495531746</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +455,8 @@
     <MESSAGE value="Update controlleur" />
     <MESSAGE value="Update entité" />
     <MESSAGE value="Update Formulaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Formulaire" />
+    <MESSAGE value="Update partie projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update partie projet" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

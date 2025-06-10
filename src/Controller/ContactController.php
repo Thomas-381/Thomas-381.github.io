@@ -33,7 +33,7 @@ final class ContactController extends AbstractController
         name: 'app_contact_new',
         methods: ['POST']
     )]
-    public function new(Request $request, EntityManagerInterface $entityManager): void
+    public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactForm::class, $contact);
@@ -43,6 +43,7 @@ final class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
         }
+        return $this->redirectToRoute('app_default_index');
     }
 
     #[Route(
