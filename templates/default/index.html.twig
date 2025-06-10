@@ -157,7 +157,7 @@
         <div id="partieProjet" class="carteProjets w-100 d-flex flex-column gap-3 px-md-5 align-items-center">
             {% for projet in projets|sort((a, b) => b.important|default(0) <=> a.important|default(0) ) %}
                 <div id="{{ projet.id }}" class="card d-flex flex-column border-primary w-75 p-3 align-items-center justify-content-center gap-md-4 rounded-3">
-                    <a class="d-flex flex-row align-items-center justify-content-center gap-md-4 text-decoration-none text-dark" data-bs-toggle="collapse" href="#collapse{{ projet.nom|trim|replace({' ': "_"}) }}" role="button" aria-expanded="false" aria-controls="collapse{{ projet.nom|trim|replace({' ': "_"}) }}">
+                    <a class="d-flex align-items-center justify-content-center gap-md-4 text-decoration-none text-dark" data-bs-toggle="collapse" href="#collapse{{ projet.nom|trim|replace({' ': "_"}) }}" role="button" aria-expanded="false" aria-controls="collapse{{ projet.nom|trim|replace({' ': "_"}) }}">
                         <img src="{{ asset(projet.visuel) }}" class="img" alt="{{ projet.nom }}">
                         <div class="card-body p-0">
                             <h3>{{ projet.nom }}</h3>
