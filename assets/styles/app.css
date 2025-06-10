@@ -2,7 +2,9 @@
 html > body {
     font-family: 'Nunito', 'Nunito Sans', sans-serif;
 }
-
+a {
+    scroll-behavior: smooth;
+}
 a.btn-back {
     position: absolute;
     left: 10px;
