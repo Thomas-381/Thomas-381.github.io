@@ -76,7 +76,7 @@
             </a>-->
         </article>
     </section>
-    <section class="secondaire" id="competence">
+    <section class="secondaire pt-5" id="competence">
         <div>
             <h2>Compétences</h2>
         </div>
@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center gap-3">
-            <p class="fs-5">Voici les Outils et <abbr title="Environnement de Développement Intégré">EDI</abbr> que je maitrise et utilise au quotidien</p>
+            <p class="fs-5">Voici les Outils et <span class="text-decoration-underline" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-title="Environnement de Développement Intégré">EDI</span> que je maitrise et utilise au quotidien</p>
             <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 w-50">
                 {% for ide in ides %}
                     <div class="card d-flex flex-column align-items-center justify-content-center px-0 py-3 gap-md-3 border-primary rounded-3 logoLangage bg-opacity-10 bg-primary">
@@ -204,4 +204,8 @@
             {{ form_end(form) }}
         </div>
     </section>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 {% endblock %}
