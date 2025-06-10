@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="Update partie competence">
+    <list default="true" id="78a5c040-994b-49a7-9774-5f2cdc0b2583" name="Changes" comment="Update config file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -299,7 +299,7 @@
       <workItem from="1748958404236" duration="2986000" />
       <workItem from="1749476371685" duration="7612000" />
       <workItem from="1749493932273" duration="6018000" />
-      <workItem from="1749540093391" duration="3298000" />
+      <workItem from="1749540093391" duration="3935000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore, add for webstorm IDE">
       <option name="closed" value="true" />
@@ -421,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749542777780</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update config file">
+      <option name="closed" value="true" />
+      <created>1749547012852</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1749547012852</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +464,8 @@
     <MESSAGE value="Update Formulaire" />
     <MESSAGE value="Update partie projet" />
     <MESSAGE value="Update partie competence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update partie competence" />
+    <MESSAGE value="Update config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update config file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
