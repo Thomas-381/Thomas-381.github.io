@@ -31,11 +31,11 @@ figure > svg {
     height: 35px;
 }
 
-#partieProjet > div > a:nth-child(odd){
+#partieProjet > div:nth-child(odd) > a{
     flex-direction: row;
 }
 
-#partieProjet > div > a:nth-child(even){
+#partieProjet > div:nth-child(even) > a{
     flex-direction: row-reverse;
 }
 a.carte {
