@@ -57,19 +57,19 @@
             <a class=" nav-link" href="#formulaireContact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </li>
     {% endif %}
+    {% if is_granted('ROLE_USER') %}
         <li class="navbar-nav nav-item dropdown" id="dropDownCompte">
             <a id="btnDropDownEditeur" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                 <i class="fas fa-user"></i> Compte
             </a>
             <div id="dropdownEditeurAActiver" class="dropdown-menu" style="min-width: 5rem;">
                 <a class="dropdown-item{% if is_granted('ROLE_USER') %}" href="{{ path('app_usager_show', {'id': app.user.id}) }}"{% else %} disabled" href="#"{% endif %}>Mon Compte</a>
-                {% if is_granted('ROLE_USER') %}
+
                     <a class="dropdown-item" href="{{ path('app_logout') }}">Se Déconnecter</a>
-                {% else %}
-                    <a class="dropdown-item" href="{{ path('app_login') }}">Se Connecter</a>
-                {% endif %}
+
             </div>
         </li>
+    {% endif %}
         {#<li>
             <button class="btn" id="switch-mode" data-umami-event="Switch Theme">
                 <img src="{{ asset('logo/light.png') }}" id="mode-dark" alt="light">
