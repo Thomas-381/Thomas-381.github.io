@@ -18,7 +18,7 @@ class Projet
     #[ORM\Column(length: 32)]
     private ?string $nom = null;
 
-    #[ORM\Column(length: 200)]
+    #[ORM\Column(length: 2047)]
     private ?string $description = null;
 
     #[ORM\Column(length: 32)]
