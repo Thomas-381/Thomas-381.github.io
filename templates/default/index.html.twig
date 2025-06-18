@@ -7,7 +7,7 @@
         <h1>Thomas Reymond</h1>
         <h3 class="sousTitre">Étudiant en BUT informatique à Grenoble</h3>
         <p>Je m'appelle Thomas, j'ai 19 ans et j'habite à Saint-Égrève.<br>
-            Je suis étudiant en <abbr title="Bachelor Universitaire de Technologie" class="initialism">BUT</abbr> informatique à l'IUT2 de Grenoble,<br>
+            Je suis étudiant en <span class="text-decoration-underline" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-title="Bachelor Universitaire de Technologie">BUT</span> informatique à l'IUT2 de Grenoble,<br>
             plus précisement en 2<sup>de</sup> année, parcours développement d'applications.
         <article class="carteResau"><!--Liens vers des reseaux sociaux-->
             <a href="https://www.linkedin.com/in/thomas-reymond-6b0007339/" target="_blank" title="Linkedin">
@@ -81,7 +81,7 @@
             <h2>Compétences</h2>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center gap-3">
-            <p class="fs-5">Voici les langes que je maitrise</p>
+            <p class="fs-5">Voici les langages que je maitrise (de programmation et de balisage) :</p>
             <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 w-50">
                 {% for langage in langages %}
                     <div class="card d-flex flex-column align-items-center justify-content-center px-0 py-3 gap-md-3 border-primary rounded-3 logoLangage bg-opacity-10 bg-primary">
@@ -92,7 +92,9 @@
             </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center gap-3">
-            <p class="fs-5">Voici les Outils et <span class="text-decoration-underline" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-title="Environnement de Développement Intégré">EDI</span> que je maitrise et utilise au quotidien</p>
+            <p class="fs-5">Voici les Outils et
+                <span class="text-decoration-underline" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-title="Environnement de Développement Intégré">
+                    EDI</span> que je maitrise et utilise au quotidien :</p>
             <div class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 w-50">
                 {% for ide in ides %}
                     <div class="card d-flex flex-column align-items-center justify-content-center px-0 py-3 gap-md-3 border-primary rounded-3 logoLangage bg-opacity-10 bg-primary">
@@ -103,38 +105,60 @@
             </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center gap-3">
-            <p class="fs-5">À travers une multitude de projets personnels, ainsi que grâce mon cursus, j'ai pu acquérir un certain nombre de compétences tél que : </p>
+            <p class="fs-5">À travers une multitude de projets personnels, ainsi que grâce à mon cursus, j'ai pu acquérir un certain nombre de compétences tel que :</p>
             <div class="d-flex flex-row flex-wrap justify-content-center align-items-stretch gap-3 w-75" id="listeCompetence">
                 <article class="card">
                     <h6 class="card-header w-100">{{ ux_icon('bxs:data', {class: 'logo'}) }} Administrer une base de données</h6>
-                    <ul class="card-body px-3 my-0">
+                    <ul class="card-body px-4 my-0">
                         <li>Analyser et visualiser efficacement des données issues de plusieurs tables en utilisant des jointures complexes pour en extraire des informations pertinentes.</li>
                         <li>Concevoir une base de données relationnelle complète en suivant un cahier des charges précis, incluant la mise en place de déclencheurs (triggers) pour automatiser certaines actions.</li>
                     </ul>
                 </article>
                 <article class="card">
                     <h6 class="card-header w-100">{{ ux_icon('icon-park-outline:code-computer', {class: 'logo'}) }} Administrer un système informatique</h6>
-                    <ul class="card-body px-3 my-0">
+                    <ul class="card-body px-4 my-0">
                         <li>Installer et configurer un système d'exploitation pour un serveur ou un poste de travail</li>
                         <li>Création de script permettant l'optimisation de certainne tache (mise en production, ...)</li>
                     </ul>
                 </article>
                 <article class="card">
                     <h6 class="card-header w-100">{{ ux_icon('simple-icons:devbox', {class: 'logo'}) }} Concevoir une application</h6>
-                    <ul class="card-body px-3 my-0">
+                    <ul class="card-body px-4 my-0">
                         <li>Concevoir une application simple a l'aide d'un cahier des charges</li>
                         <li>Réaliser des tests unitaires, fonctionnel, de non-regression de l'application a l'aide de framework (Mocha, C8, Cypress, Espresso, ...)</li>
                     </ul>
                 </article>
                 <article class="card">
                     <h6 class="card-header w-100">{{ ux_icon("ri:team-fill", {class: 'logo'}) }} Collaborer dans une équipe informatique</h6>
-                    <ul class="card-body px-3 my-0">
+                    <ul class="card-body px-4 my-0">
                         <li>Connaissance de logiciel de gestion de version (git) ainsi que des conventions de nommages de commit.</li>
                         <li>Analyser un problème avec méthode et savoir demander en cas de difficultés</li>
                     </ul>
                 </article>
             </div>
         </div>
+    </section>
+    <section class="secondaire" id="formations">
+        <div>
+            <h2>Mes Formations</h2>
+        </div>
+        <article class="d-flex flex-row w-100 px-5 justify-content-center align-items-stretch gap-4">
+            <div class="card w-35">
+                <h6 class="card-header w-100 text-center ">Institut Universitaire de Technologie 2 à Grenoble</h6>
+                <div class="card-body">
+                    <p class="card-text">Bachelor Universitaire de Technologie en Informatique</p>
+                    <p class="card-text">2023 - Aujourd'hui</p>
+                </div>
+            </div>
+            <div class="card w-35">
+                <h6 class="card-header w-100 text-center">Lycée Ferdinand Buisson "La NAT"</h6>
+                <div class="card-body">
+                    <p class="card-text">Baccalauréat Technologique <span class="text-decoration-underline" style="cursor: pointer" data-bs-toggle="tooltip" data-bs-title="Sciences et Technologies de l'Industrie et du Développement Durable">STI2D</span> enseignement spécifique systèmes d'information et numérique
+                    </p>
+                    <p class="card-text">2020 - 2023</p>
+                </div>
+            </div>
+        </article>
     </section>
     <section class="secondaire" id="projets">
         <div>
@@ -171,9 +195,9 @@
                             </div>
                         </div>
                     </a>
-                    <div class="collapse" id="collapse{{ projet.nom|trim|replace({' ': "_"}) }}">
+                    <div class="collapse w-75" id="collapse{{ projet.nom|trim|replace({' ': "_"}) }}">
                         <p>{{ projet.description|markdown_to_html }}</p>
-                        <div class="card-body d-flex flex-row align-items-center justify-content-start gap-4">
+                        <div class="card-body d-flex flex-row align-items-center justify-content-center gap-4">
                             <div><i class="fas fa-clock"></i> {{ projet.duree }}</div>
                             <div><i class="fas fa-users-gear"></i> {{ projet.equipe }}</div>
                             {% if projet.lienGithub %}
